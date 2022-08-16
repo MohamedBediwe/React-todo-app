@@ -1,0 +1,174 @@
+header, form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+form input, form button, form select {
+  padding: 1rem
+}
+
+form .select {
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+form .select select {
+  border: none;
+  color: #ff6f47;
+  height: 60px;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 170px;
+}
+
+select option {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Arrow  */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.219rem;
+  background: #ff6f47;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+form .select select:focus {
+  outline: none;
+}
+
+form input, form button {
+  background-color: azure;
+  border: none;
+  color: #ff6f47;
+}
+
+form input {
+  font-size: 1.5rem;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button {
+  padding-block: 0;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+form button:hover {
+  color: azure;
+  background-color: #ff6f47;
+}
+
+@media (max-width: 639px) {
+  form {
+    display: grid;
+    grid-template-columns: calc(100% - 48px) 48px;
+    padding-inline: 10px;
+    gap: 10px 0;
+  }
+  form .select {
+    width: calc(100% + 48px);
+    margin: 0 auto;
+  }
+  form .select select {
+    width: 100%
+  }
+}
+
+.todos {
+  margin-top: 1.25rem;
+}
+
+.complete-btn img {
+  max-width: 30px;
+}
+
+.todos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todos-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.filter-todo {
+  padding: 2rem;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.trash-btn img,
+.complete-btn img {
+  width: 16px;
+  pointer-events: none;
+}
+
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .todos-list {
+    min-width: 85vw;
+  }
+}
